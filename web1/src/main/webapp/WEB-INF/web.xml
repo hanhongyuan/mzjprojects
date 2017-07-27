@@ -27,7 +27,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>testservlet</servlet-name>
-		<url-pattern>/test/*</url-pattern>
+		<url-pattern>/test</url-pattern>
 	</servlet-mapping>
 	
 	<!-- 2./*全部拦截，缺省的/就没用了
