@@ -25,6 +25,7 @@ public class TestServlet extends HttpServlet {
 			testRedirect(req, resp);
 		} else {
 			String tips = "please add parameter 'type'! such as: http://localhost:8380/web1/test?type=session|redirect";
+//			System.out.println(tips);
 			resp.getWriter().write(tips);
 		}
 	}
