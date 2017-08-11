@@ -14,6 +14,6 @@ public class ApiController {
 	// http://localhost:8080/spring/api/time
 	@RequestMapping("/time")
 	public String getServerTime() {
-		return commService.getServerTime();
+		return "服务器时间：" + commService.getServerTime();
 	}
 }
