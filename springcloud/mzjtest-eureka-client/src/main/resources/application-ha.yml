@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: test-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://127.0.0.1:1112/eureka/
+  instance:
+    preferIpAddress: true
