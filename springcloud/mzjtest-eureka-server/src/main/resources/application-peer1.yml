@@ -9,6 +9,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:1112/eureka/
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 5000
 
 spring:
   application:
