@@ -11,7 +11,7 @@ eureka:
       defaultZone: http://localhost:1112/eureka/
   server:
     enableSelfPreservation: false
-    evictionIntervalTimerInMs: 5000
+    evictionIntervalTimerInMs: 3000
 
 spring:
   application:
