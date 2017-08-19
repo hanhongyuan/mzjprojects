@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: testsleuth-service
+server:
+  port: 8083
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/

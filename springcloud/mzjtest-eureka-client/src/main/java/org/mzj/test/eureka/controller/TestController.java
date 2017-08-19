@@ -21,6 +21,7 @@ public class TestController {
 
 	@RequestMapping("/test")
 	public String test() {
+		logger.info("==== test -->");
 		ServiceInstance instance = client.getLocalServiceInstance();
 		String json = JSONObject.fromObject(instance).toString();
 		logger.info("LocalServiceInstance: " + json);
@@ -33,6 +34,7 @@ public class TestController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		logger.info("==== test --|");
 		return json;
 	}
 }
