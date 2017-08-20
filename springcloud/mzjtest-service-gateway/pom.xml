@@ -51,6 +51,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
 		</dependency>
+		<!-- zuul实现api网关 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
+		</dependency>
 		<!-- sleuth实现服务跟踪 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

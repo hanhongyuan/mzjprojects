@@ -1,14 +1,17 @@
 package org.mzj.test.eureka;
 
+import org.mzj.test.eureka.filter.AccessFilter;
 import org.mzj.test.eureka.sample.TagSampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-//激活DiscoveryClient实现
+//开启zuul的网关服务功能
+@EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ServiceApplication {
@@ -17,6 +20,11 @@ public class ServiceApplication {
 	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
+	}
+	
+	@Bean
+	public AccessFilter accessFilter() {
+		return new AccessFilter();
 	}
 	
 	//使用自定义的Sampler
