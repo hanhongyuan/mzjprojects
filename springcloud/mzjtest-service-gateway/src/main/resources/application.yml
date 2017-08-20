@@ -1,8 +1,9 @@
-spring:
-  application:
-    name: testsleuth-service
 server:
   port: 8083
+  
+spring:
+  application:
+    name: gateway-service
 eureka:
   client:
     serviceUrl:

@@ -28,7 +28,7 @@ public class TestController {
 		
 		// 模拟阻塞，时间要超过Hystrix默认的超时时间2000ms
 		try {
-			int sleepTime = new Random().nextInt(4000);
+			int sleepTime = new Random().nextInt(2000);
 			logger.info("====sleepTime: " + sleepTime + "ms");
 			Thread.sleep(sleepTime);
 		} catch (InterruptedException e) {

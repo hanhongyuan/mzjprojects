@@ -14,14 +14,19 @@ public class ConsumerService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	@HystrixCommand(fallbackMethod = "testFallback")
+	@HystrixCommand(fallbackMethod = "fallback")
 	public String doTestInternal() {
 		return restTemplate.getForEntity("http://test-service/test", String.class).getBody();
 	}
+	
+	@HystrixCommand(fallbackMethod = "fallback")
+	public String doTraceInternal() {
+		return restTemplate.getForEntity("http://testsleuth-service/trace1", String.class).getBody();
+	}
 
 	// 熔断请求回调方法
-	public String testFallback() {
-		logger.info("testFallback");
+	public String fallback() {
+		logger.info("fallback");
 		return "error";
 	}
 }
